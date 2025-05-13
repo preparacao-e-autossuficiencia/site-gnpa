@@ -1,0 +1,15 @@
+.circleci/
+bin/
+vendor/bin/
+tests/
+composer.json
+composer.lock
+phpstan/
+phpstan-stubs/
+phpstan.neon
+phpstan-bootstrap.php
+.phpunit.result.cache
+phpunit.xml.dist
+
+*.test.{js,ts}
+*.spec.{js,ts}

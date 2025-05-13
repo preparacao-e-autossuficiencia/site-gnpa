@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<ruleset name="GNPA-WPCS">
+    <description>GNPA Wordpress Coding Standards</description>
+
+    <!-- Scan all files in directory -->
+    <file>.</file>
+
+    <!-- Scan only PHP files -->
+    <arg name="extensions" value="php"/>
+
+    <!-- Exclude the Composer Vendor directory. -->
+	<exclude-pattern>/src/plugin-src/vendor/*</exclude-pattern>
+	<exclude-pattern>/src/plugin-src/includes/*</exclude-pattern>
+	<exclude-pattern>/src/plugin-src/phpstan-stubs/*</exclude-pattern>
+
+	<!-- Exclude the Node Modules directory. -->
+	<exclude-pattern>/node_modules/*</exclude-pattern>
+	<exclude-pattern>/src/plugin-src/classes/Assets/WpScript/build/*</exclude-pattern>
+	<exclude-pattern>/src/plugin-src/phpstan/*</exclude-pattern>
+
+    <!-- Show colors in console -->
+    <arg value="-colors"/>
+
+    <!-- Show sniff codes in all reports -->
+    <arg value="ns"/>
+
+    <rule ref="WordPress">
+		<!-- Exclude the rule for inline comment end characters -->
+        <exclude name="Squiz.Commenting.InlineComment.InvalidEndChar" />
+	</rule>
+
+    <rule ref="WordPress-Core"/>
+
+    <rule ref="WordPress-Extra">
+        <!-- let me break file naming convention -->
+        <exclude name="WordPress.Files.FileName"/>
+        <!-- let me break variable naming convention -->
+        <exclude name="WordPress.NamingConventions.ValidVariableName"/>
+    </rule>
+
+    <!-- Let's also check that everything is properly documented. -->
+    <rule ref="WordPress-Docs"/>
+
+    <!-- Add in some extra rules from other standards. -->
+    <rule ref="Generic.CodeAnalysis.UnusedFunctionParameter"/>
+    <rule ref="Generic.Commenting.Todo"/>
+
+    <!-- Exclude function comment requirement for test files -->
+    <rule ref="Squiz.Commenting.FunctionComment.Missing">
+        <exclude-pattern>/src/plugin-src/tests/*</exclude-pattern>
+    </rule>
+
+	<rule ref="Squiz.Commenting.VariableComment.Missing">
+		<exclude-pattern>/src/plugin-src/tests/*</exclude-pattern>
+	</rule>
+
+    <config name="minimum_supported_wp_version" value="5.5"/>
+</ruleset>

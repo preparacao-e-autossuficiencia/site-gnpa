@@ -1,0 +1,13 @@
+# Editor ( Gutenberg )
+
+# Project Default
+dist/
+vendor/
+node_modules/
+.phpunit.result.cache
+.wp-env.override.json
+coverage/*
+.env
+.cursor/
+
+flags.dev.json
