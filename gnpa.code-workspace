@@ -1,0 +1,144 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"launch": {
+		"configurations": [
+			{
+				"name": "Listen for XDebug",
+				"type": "php",
+				"request": "launch",
+				"port": 9003,
+			}
+		],
+		"compounds": []
+	},
+	"extensions": {
+		"recommendations": [
+			"esbenp.prettier-vscode",
+			"svelte.svelte-vscode",
+			"bmewburn.vscode-intelephense-client",
+			"xdebug.php-debug",
+			"dbaeumer.vscode-eslint",
+			"valeryanm.vscode-phpsab",
+			"aaron-bond.better-comments",
+			"christian-kohler.path-intellisense",
+			"EditorConfig.EditorConfig",
+			"streetsidesoftware.code-spell-checker",
+			"yoavbls.pretty-ts-errors"
+		],
+		"unwantedRecommendations": []
+	},
+	"settings": {
+		"[php]": {
+			"editor.detectIndentation": true,
+			"editor.useTabStops": true,
+			"editor.formatOnSave": true,
+			"editor.insertSpaces": false,
+			"editor.defaultFormatter": "valeryanm.vscode-phpsab"
+		},
+		"[typescript]": {
+			"editor.defaultFormatter": "esbenp.prettier-vscode"
+		},
+		"[javascript]": {
+			"editor.defaultFormatter": "esbenp.prettier-vscode"
+		},
+		"[svelte]": {
+			"editor.defaultFormatter": "esbenp.prettier-vscode"
+		},
+		// PHPCS & PHPCBF
+		"php.validate.run": "onSave",
+		"phpSniffer.executablesFolder": "./src/plugin-src/vendor/bin",
+		"phpsab.fixerEnable": true,
+		"phpsab.snifferEnable": true,
+		"phpsab.autoRulesetSearch": true,
+		"phpsab.snifferMode": "onSave",
+		"phpsab.snifferShowSources": true,
+		"phpsab.debug": false,
+		"phpsab.composerJsonPath": "src/plugin-src/composer.json",
+		"intelephense.stubs": [
+			"apache",
+			"bcmath",
+			"bz2",
+			"calendar",
+			"com_dotnet",
+			"Core",
+			"ctype",
+			"curl",
+			"date",
+			"dba",
+			"dom",
+			"enchant",
+			"exif",
+			"FFI",
+			"fileinfo",
+			"filter",
+			"fpm",
+			"ftp",
+			"gd",
+			"gettext",
+			"gmp",
+			"hash",
+			"iconv",
+			"imap",
+			"intl",
+			"json",
+			"ldap",
+			"libxml",
+			"mbstring",
+			"meta",
+			"mysqli",
+			"oci8",
+			"odbc",
+			"openssl",
+			"pcntl",
+			"pcre",
+			"PDO",
+			"pdo_ibm",
+			"pdo_mysql",
+			"pdo_pgsql",
+			"pdo_sqlite",
+			"pgsql",
+			"Phar",
+			"posix",
+			"pspell",
+			"random",
+			"readline",
+			"Reflection",
+			"session",
+			"shmop",
+			"SimpleXML",
+			"snmp",
+			"soap",
+			"sockets",
+			"sodium",
+			"SPL",
+			"sqlite3",
+			"standard",
+			"superglobals",
+			"sysvmsg",
+			"sysvsem",
+			"sysvshm",
+			"tidy",
+			"tokenizer",
+			"xml",
+			"xmlreader",
+			"xmlrpc",
+			"xmlwriter",
+			"xsl",
+			"Zend OPcache",
+			"zip",
+			"zlib",
+			"wordpress"
+		],
+		"eslint.validate": ["javascript", "typescript", "svelte"],
+		"prettier.configPath": "./.prettierrc",
+		"prettier.ignorePath": "./.prettierignore",
+		"cSpell.words": [
+			"hakira",
+		],
+		"editor.formatOnSave": true
+	}
+}
