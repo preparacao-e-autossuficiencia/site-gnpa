@@ -1,16 +1,14 @@
 <?php
 /**
- * Etch
+ * GNPA
  *
- * @package           Etch
- * @author            Digital Gravy
- * @copyright         2024 Digital Gravy
- * @gplv2
+ * @package           GNPA
+ * @author            Hakira Shymuy
+ * @copyright         2024 GNPA
  *
- * @wordpress-plugin
  * Plugin Name:       GNPA
  * Plugin URI:        https://preparacaoeautossuficiencia.pt
- * Description:       Tema para o site da GNPA.
+ * Description:       Plugin para o site da GNPA.
  * Version:           0.0.1
  * Requires at least: 6.7
  * Requires PHP:      8.4
