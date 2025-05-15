@@ -8,6 +8,11 @@
             "Gnpa\\Gnpa\\": "./"
         }
     },
+	"autoload-dev": {
+		"psr-4": {
+			"Tests\\": "tests/"
+		}
+	},
     "authors": [
         {
             "name": "Hakira-Shymuy",
@@ -22,13 +27,18 @@
         "phpstan/extension-installer": "^1.4",
         "szepeviktor/phpstan-wordpress": "^2.0",
         "php-stubs/wordpress-stubs": "^6.8",
-        "php-stubs/wordpress-tests-stubs": "^6.8"
+        "php-stubs/wordpress-tests-stubs": "^6.8",
+        "pestphp/pest": "^3.8"
 	},
     "minimum-stability": "stable",
     "config": {
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true,
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "pestphp/pest-plugin": true
         }
-    }
+    },
+	"scripts": {
+		"test": "pest"
+	}
 }
