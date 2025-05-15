@@ -1,6 +1,22 @@
 {
 	"version": "0.2",
-	"ignorePaths": [],
+	"ignorePaths": [
+		"node_modules",
+		"vendor",
+		"*.min.js",
+		"*.min.css",
+		"*.min.map",
+		"composer.json",
+		"composer.lock",
+		"package-lock.json",
+		"package.json",
+		".repo_ignore",
+		"cspell.json",
+		"phpcs.xml",
+		".gitignore",
+		"gnpa.code-workspace"
+
+	],
 	"dictionaryDefinitions": [],
 	"dictionaries": [],
 	"words": [
