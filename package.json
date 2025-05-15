@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "wp": "wp-env start"
-
+    "wp": "wp-env",
+    "wp:start": "wp-env start",
+    "wp:stop": "wp-env stop"
   },
   "repository": {
     "type": "git",
