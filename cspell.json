@@ -15,7 +15,6 @@
 		"phpcs.xml",
 		".gitignore",
 		"gnpa.code-workspace"
-
 	],
 	"dictionaryDefinitions": [],
 	"dictionaries": [],
@@ -40,6 +39,7 @@
 		"cpts",
 		"distignore",
 		"divs",
+		"fastcgi",
 		"gnpa",
 		"Hakira",
 		"Hoverable",
