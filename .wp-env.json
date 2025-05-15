@@ -9,6 +9,7 @@
 		"WP_DEBUG_DISPLAY": false,
 		"SCRIPT_DEBUG": true
 	},
-	"port": 8000,
-	"testsPort": 8001
+	"phpVersion": "8.4",
+	"port": 9000,
+	"testsPort": 9001
 }
