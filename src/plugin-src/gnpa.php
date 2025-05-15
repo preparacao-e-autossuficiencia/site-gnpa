@@ -4,7 +4,7 @@
  *
  * @package           GNPA
  * @author            Hakira Shymuy
- * @copyright         2024 GNPA
+ * @copyright         2025 GNPA
  *
  * Plugin Name:       GNPA
  * Plugin URI:        https://preparacaoeautossuficiencia.pt
