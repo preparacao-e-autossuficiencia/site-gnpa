@@ -1,8 +1,54 @@
 {
 	"settings": {
+		"color": {
+			"defaultPalette": false,
+			"palette": [
+				{
+					"color": "#1C1C1C",
+					"name": "Base",
+					"slug": "base"
+				},
+				{
+					"color": "#1B1F24",
+					"name": "Dark Blue Background",
+					"slug": "dark-blue"
+				},
+				{
+					"color": "#2C2F2B",
+					"name": "Cards Background",
+					"slug": "dark-green"
+				},
+				{
+					"color": "#5A7D27",
+					"name": "Accent Green",
+					"slug": "accent-green"
+				},
+				{
+					"color": "#C1600D",
+					"name": "Accent Orange",
+					"slug": "accent-orange"
+				},
+				{
+					"color": "#494C50",
+					"name": "Accent Gray",
+					"slug": "accent-gray"
+				},
+				{
+					"color": "#BFC3C1",
+					"name": "Text Color",
+					"slug": "text-color"
+				},
+				{
+					"color": "#D3D6D4",
+					"name": "Headings color",
+					"slug": "headings-color"
+				}
+
+			]
+		},
 		"layout": {
-			"contentSize": "745px",
-			"wideSize": "1340px"
+			"contentSize": "845px",
+			"wideSize": "1290px"
 		},
 		"spacing": {
 			"defaultSpacingSizes": false,
@@ -19,6 +65,10 @@
 		"useRootPaddingAwareAlignments": false
 	},
 	"styles": {
+		"color": {
+			"background": "var:preset|color|base",
+			"text": "var:preset|color|text-color"
+		},
 		"spacing": {
 			"blockGap": "0",
 			"padding": {
@@ -26,6 +76,13 @@
 				"right": "inherit",
 				"bottom": "inherit",
 				"left": "inherit"
+			}
+		},
+		"elements": {
+			"heading": {
+				"color": {
+					"text": "var:preset|color|headings-color"
+				}
 			}
 		}
 	},
