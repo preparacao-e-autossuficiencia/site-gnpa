@@ -19,7 +19,9 @@
 		"@wordpress/hooks",
 		"@wordpress/i18n",
 		"@wordpress/plugins"
-	  ]
+	  ],
+	  "outDir": "./dist"
 	},
-	"include": ["./"]
+	"include": ["src/**/*.ts", "src/**/*.tsx"],
+	"exclude": ["dist"]
 }
