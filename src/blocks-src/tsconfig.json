@@ -1,0 +1,25 @@
+{
+	"compilerOptions": {
+	  "target": "ESNext",
+	  "module": "ESNext",
+	  "lib": ["DOM", "DOM.Iterable", "ESNext"],
+	  "moduleResolution": "Node",
+	  "jsx": "react-jsx",
+	  "esModuleInterop": true,
+	  "allowSyntheticDefaultImports": true,
+	  "strict": true,
+	  "skipLibCheck": true,
+	  "forceConsistentCasingInFileNames": true,
+	  "resolveJsonModule": true,
+	  "isolatedModules": true,
+	  "types": [
+		"@wordpress/block-editor",
+		"@wordpress/components",
+		"@wordpress/compose",
+		"@wordpress/hooks",
+		"@wordpress/i18n",
+		"@wordpress/plugins"
+	  ]
+	},
+	"include": ["./"]
+}
