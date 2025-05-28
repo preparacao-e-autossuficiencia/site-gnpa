@@ -5,7 +5,9 @@
   "scripts": {
     "wp": "wp-env",
     "wp:start": "wp-env start",
-    "wp:stop": "wp-env stop"
+    "wp:stop": "wp-env stop",
+		"phpmyadmin:start": "docker stop wp-env-phpmyadmin 2>/dev/null; docker run --name wp-env-phpmyadmin --rm -d -p 8080:80 -e PMA_HOST=host.docker.internal -e PMA_PORT=$(docker port $(docker ps -q -f name=\"$(echo -n \"$(realpath .wp-env.json)\" | md5sum | awk '{print $1}')-mysql-1\") 3306/tcp | awk -F':' '{print $2}') -e PMA_USER=root -e PMA_PASSWORD=password phpmyadmin",
+		"phpmyadmin:stop": "docker stop wp-env-phpmyadmin"
   },
   "repository": {
     "type": "git",
