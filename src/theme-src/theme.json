@@ -1,5 +1,6 @@
 {
 	"settings": {
+		"appearanceTools": true,
 		"color": {
 			"defaultPalette": false,
 			"palette": [
@@ -22,6 +23,11 @@
 					"color": "#5A7D27",
 					"name": "Accent Green",
 					"slug": "accent-green"
+				},
+				{
+					"color": "#384038",
+					"name": "Accent Dark Green",
+					"slug": "accent-dark-green"
 				},
 				{
 					"color": "#C1600D",
@@ -48,10 +54,32 @@
 		},
 		"layout": {
 			"contentSize": "845px",
-			"wideSize": "1290px"
+			"wideSize": "1330px"
 		},
 		"spacing": {
 			"defaultSpacingSizes": false,
+			"spacingSizes": [
+				{
+					"name": "Tiny",
+					"size": "10px",
+					"slug": "space-tiny"
+				},
+				{
+					"name": "Small",
+					"size": "15px",
+					"slug": "space-small"
+				},
+				{
+					"name": "Medium",
+					"size": "20px",
+					"slug": "space-medium"
+				},
+				{
+					"name": "Big",
+					"size": "30px",
+					"slug": "space-big"
+				}
+			],
 			"units": [
 				"%",
 				"px",
@@ -60,7 +88,7 @@
 				"vh",
 				"vw"
 			],
-			"padding": false
+			"padding": true
 		},
 		"useRootPaddingAwareAlignments": false
 	},
