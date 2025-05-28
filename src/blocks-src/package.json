@@ -1,0 +1,19 @@
+{
+  "name": "blocks",
+  "version": "0.0.1",
+  "author": "",
+  "main": "index.js",
+  "description": "",
+  "license": "GPL-2.0-or-later",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@wordpress/components": "^29.10.0",
+    "@wordpress/scripts": "^30.17.0"
+  },
+  "dependencies": {
+    "typescript": "^5.8.3"
+  }
+}
