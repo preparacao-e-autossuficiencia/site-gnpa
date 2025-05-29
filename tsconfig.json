@@ -20,7 +20,8 @@
 		"@wordpress/compose",
 		"@wordpress/element",
 		"@wordpress/hooks",
-		"@wordpress/i18n"
+		"@wordpress/i18n",
+		"@types/bun"
 	  ],
 	  "outDir": "./dist"
 	},
