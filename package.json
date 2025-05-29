@@ -1,8 +1,4 @@
 {
-	"workspaces": [
-		"src/blocks-src"
-	],
-	"type": "module",
 	"name": "gnpa",
 	"version": "1.0.0",
 	"author": "Hakira Shymuy",
@@ -11,6 +7,18 @@
 		"url": "git+https://github.com/preparacao-e-autossuficiencia/site-gnpa.git"
 	},
 	"main": "index.js",
+	"devDependencies": {
+		"@eslint/js": "^9.27.0",
+		"@types/bun": "^1.2.15",
+		"@wordpress/env": "^10.23.0",
+		"@wordpress/eslint-plugin": "^22.10.0",
+		"eslint": "^9.27.0",
+		"eslint-config-prettier": "^10.1.5",
+		"eslint-plugin-react": "^7.37.5",
+		"globals": "^16.2.0",
+		"typescript": "^5.8.3",
+		"typescript-eslint": "^8.33.0"
+	},
 	"bugs": {
 		"url": "https://github.com/preparacao-e-autossuficiencia/site-gnpa/issues"
 	},
@@ -24,19 +32,8 @@
 		"phpmyadmin:start": "docker stop wp-env-phpmyadmin 2>/dev/null; docker run --name wp-env-phpmyadmin --rm -d -p 8080:80 -e PMA_HOST=host.docker.internal -e PMA_PORT=$(docker port $(docker ps -q -f name=\"$(echo -n \"$(realpath .wp-env.json)\" | md5sum | awk '{print $1}')-mysql-1\") 3306/tcp | awk -F':' '{print $2}') -e PMA_USER=root -e PMA_PASSWORD=password phpmyadmin",
 		"phpmyadmin:stop": "docker stop wp-env-phpmyadmin"
 	},
-	"dependencies": {
-		"@wordpress/components": "^29.10.0"
-	},
-	"devDependencies": {
-		"@eslint/js": "^9.27.0",
-		"@types/bun": "^1.2.15",
-		"@wordpress/env": "^10.23.0",
-		"@wordpress/eslint-plugin": "^22.10.0",
-		"eslint": "^9.27.0",
-		"eslint-config-prettier": "^10.1.5",
-		"eslint-plugin-react": "^7.37.5",
-		"globals": "^16.2.0",
-		"typescript": "^5.8.3",
-		"typescript-eslint": "^8.33.0"
-	}
+	"type": "module",
+	"workspaces": [
+		"src/blocks-src"
+	]
 }

@@ -5,7 +5,7 @@
 	  "lib": ["DOM", "DOM.Iterable", "ESNext"],
 	  "moduleResolution": "Node",
 	  "jsx": "react-jsx",
-	  "jsxImportSource": "@wordpress/element",
+	//   "jsxImportSource": "@wordpress/element",
 	  "esModuleInterop": true,
 	  "allowSyntheticDefaultImports": true,
 	  "strict": true,
@@ -20,11 +20,10 @@
 		"@wordpress/compose",
 		"@wordpress/element",
 		"@wordpress/hooks",
-		"@wordpress/i18n",
-		"@wordpress/plugins"
+		"@wordpress/i18n"
 	  ],
 	  "outDir": "./dist"
 	},
-	"include": ["src/**/*.ts", "src/**/*.tsx"],
+	"include": ["src/**/*.ts", "src/**/*.tsx", "types/**/*.d.ts", "cli/**/*.ts", "cli/**/*.tsx"],
 	"exclude": ["dist"]
 }
