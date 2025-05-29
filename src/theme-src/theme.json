@@ -49,7 +49,6 @@
 					"name": "Headings color",
 					"slug": "headings-color"
 				}
-
 			]
 		},
 		"layout": {
@@ -87,33 +86,51 @@
 				"rem",
 				"vh",
 				"vw"
-			],
-			"padding": true
+			]
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFace": [
+						{
+							"fontFamily": "\"Russo One\"",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/russo-one/russo-one-400-normal.woff2"
+							]
+						}
+					],
+					"fontFamily": "\"Russo One\"",
+					"name": "Russo One",
+					"slug": "russo-one"
+				}
+			]
 		},
 		"useRootPaddingAwareAlignments": false
 	},
 	"styles": {
 		"color": {
-			"background": "var:preset|color|base",
-			"text": "var:preset|color|text-color"
-		},
-		"spacing": {
-			"blockGap": "0",
-			"padding": {
-				"top": "inherit",
-				"right": "inherit",
-				"bottom": "inherit",
-				"left": "inherit"
-			}
+			"background": "var(--wp--preset--color--base)",
+			"text": "var(--wp--preset--color--text-color)"
 		},
 		"elements": {
 			"heading": {
 				"color": {
-					"text": "var:preset|color|headings-color"
+					"text": "var(--wp--preset--color--headings-color)"
 				}
+			}
+		},
+		"spacing": {
+			"blockGap": "0",
+			"padding": {
+				"bottom": "inherit",
+				"left": "inherit",
+				"right": "inherit",
+				"top": "inherit"
 			}
 		}
 	},
 	"version": 3,
-	"$schema": "https://schemas.wp.org/wp/6.7/theme.json"
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json"
 }
