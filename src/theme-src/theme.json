@@ -90,7 +90,23 @@
 		},
 		"typography": {
 			"defaultFontSizes": false,
-			"fluid": true,
+			"fontFamilies": [
+				{
+					"fontFace": [
+						{
+							"fontFamily": "\"Russo One\"",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/russo-one/russo-one-400-normal.woff2"
+							]
+						}
+					],
+					"fontFamily": "\"Russo One\"",
+					"name": "Russo One",
+					"slug": "russo-one"
+				}
+			],
 			"fontSizes": [
 				{
 					"name": "Extra Small",
@@ -125,24 +141,7 @@
 				{
 					"name": "2X Large",
 					"size": "60px",
-					"slug": "2x-large"
-				}
-			],
-			"fontFamilies": [
-				{
-					"fontFace": [
-						{
-							"fontFamily": "\"Russo One\"",
-							"fontStyle": "normal",
-							"fontWeight": "400",
-							"src": [
-								"file:./assets/fonts/russo-one/russo-one-400-normal.woff2"
-							]
-						}
-					],
-					"fontFamily": "\"Russo One\"",
-					"name": "Russo One",
-					"slug": "russo-one"
+					"slug": "xx-large"
 				}
 			]
 		},
@@ -154,7 +153,49 @@
 			"text": "var(--wp--preset--color--text-color)"
 		},
 		"elements": {
-
+			"h1": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--xx-large)",
+					"textTransform": "uppercase"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--x-large)",
+					"textTransform": "uppercase"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--large)",
+					"textTransform": "uppercase"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--small)",
+					"textTransform": "uppercase"
+				}
+			},
+			"h5": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--base)",
+					"textTransform": "uppercase"
+				}
+			},
+			"h6": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--extra-small)",
+					"textTransform": "uppercase"
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--russo-one)",
+					"fontStyle": "normal",
+					"fontWeight": "400"
+				}
+			}
 		},
 		"spacing": {
 			"blockGap": "0",
