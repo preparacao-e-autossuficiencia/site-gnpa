@@ -15,8 +15,6 @@
 
 	<!-- Exclude the Node Modules directory. -->
 	<exclude-pattern>/node_modules/*</exclude-pattern>
-	<exclude-pattern>/src/plugin-src/classes/Assets/WpScript/build/*</exclude-pattern>
-	<exclude-pattern>/src/plugin-src/phpstan/*</exclude-pattern>
 
     <!-- Show colors in console -->
     <arg value="-colors"/>
@@ -54,5 +52,5 @@
 		<exclude-pattern>/src/plugin-src/tests/*</exclude-pattern>
 	</rule>
 
-    <config name="minimum_supported_wp_version" value="5.5"/>
+    <config name="minimum_supported_wp_version" value="6.5"/>
 </ruleset>

@@ -1,10 +1,26 @@
 {
-  "name": "blocks",
-  "version": "0.0.1",
-  "author": "",
+  "name": "gnpa-blocks",
+  "version": "0.1.0",
+	"author": "Hakira Shymuy",
+	"contributors": [
+		{
+			"name": "Hakira Shymuy",
+			"email": "hakira.shymuy@gmail.com",
+			"url": "https://github.com/Hakira-Shymuy"
+		},
+		{
+			"name": "Membros do GNPA",
+			"email": "preparacaoeautossuficiencia@gmail.com",
+			"url": "https://preparacaoeautossuficiencia.pt"
+		}
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/preparacao-e-autossuficiencia/site-gnpa.git"
+	},
   "main": "index.js",
-  "description": "",
-  "license": "GPL-2.0-or-later",
+  "description": "Custom plugin and blocks for the GNPA website",
+  "license": "GPL-3.0-or-later",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

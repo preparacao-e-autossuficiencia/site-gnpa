@@ -1,7 +1,19 @@
 {
 	"name": "gnpa",
-	"version": "1.0.0",
+	"version": "0.1.0",
 	"author": "Hakira Shymuy",
+	"contributors": [
+		{
+			"name": "Hakira Shymuy",
+			"email": "hakira.shymuy@gmail.com",
+			"url": "https://github.com/Hakira-Shymuy"
+		},
+		{
+			"name": "Membros do GNPA",
+			"email": "preparacaoeautossuficiencia@gmail.com",
+			"url": "https://preparacaoeautossuficiencia.pt"
+		}
+	],
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/preparacao-e-autossuficiencia/site-gnpa.git"
@@ -23,8 +35,8 @@
 		"url": "https://github.com/preparacao-e-autossuficiencia/site-gnpa/issues"
 	},
 	"description": "",
-	"homepage": "https://github.com/preparacao-e-autossuficiencia/site-gnpa#readme",
-	"license": "ISC",
+	"homepage": "https://github.com/preparacao-e-autossuficiencia/site-gnpa",
+	"license": "GPL-3.0-or-later",
 	"scripts": {
 		"wp": "wp-env",
 		"wp:start": "wp-env start",

@@ -8,13 +8,13 @@
  *
  * Plugin Name:       GNPA
  * Plugin URI:        https://preparacaoeautossuficiencia.pt
- * Description:       Plugin para o site da GNPA.
+ * Description:       Plugin para o site do GNPA.
  * Version:           0.0.1
  * Requires at least: 6.7
  * Requires PHP:      8.4
  * Author:            Hakira Shymuy
  * Author URI:        https://github.com/Hakira-Shymuy
- * Text Domain:       gnpa-td
+ * Text Domain:       gnpa
  * License:           GPL v3 or later
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
  */
