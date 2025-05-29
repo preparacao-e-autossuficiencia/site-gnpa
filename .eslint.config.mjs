@@ -2,27 +2,34 @@ import globals from 'globals';
 import js from '@eslint/js';
 import ts from 'typescript-eslint';
 import prettier from 'eslint-config-prettier';
-import svelte from 'eslint-plugin-svelte';
+import wordpress from '@wordpress/eslint-plugin';
 
 export default [
 	js.configs.recommended,
 	...ts.configs.recommended,
-	...svelte.configs.recommended,
+	wordpress.configs.recommended,
 	prettier,
-	...svelte.configs.prettier,
 	{
-		languageOptions: { globals: { ...globals.browser, wp: true } },
+		languageOptions: {
+			globals: {
+				...globals.browser, wp: true
+			},
+			parserOptions: {
+				jsxPragma: '@wordpress/element'
+			}
+		},
 		rules: {
 			'no-console': ['warn', { allow: ['warn', 'error'] }],
 			camelcase: [
 				'error',
 				{
-					properties: 'never', // Ensure object properties are not enforced (optional)
-					ignoreDestructuring: false, // Enforce destructured object properties
-					ignoreImports: false, // Enforce camelCase in imports
-					ignoreGlobals: true // Optionally ignore global variables
+					properties: 'never',
+					ignoreDestructuring: false,
+					ignoreImports: false,
+					ignoreGlobals: true
 				}
 			],
+			'react/react-in-jsx-scope': 'off',
 			'no-unused-vars': 'off',
 			'@typescript-eslint/ban-ts-comment': [
 				'error',
@@ -34,7 +41,6 @@ export default [
 			'@typescript-eslint/no-unused-vars': [
 				'error',
 				{
-					// ignore unused vars that start with an underscore
 					argsIgnorePattern: '^_',
 					varsIgnorePattern: '^_',
 					caughtErrorsIgnorePattern: '^_'
@@ -42,20 +48,7 @@ export default [
 			]
 		}
 	},
-	{ files: ['**/*.{js,mjs,cjs,ts}'] },
-	{
-		files: ['**/*.svelte', '**/*.svelte.{js,mjs,cjs,ts}'],
-		languageOptions: {
-			parser: svelte.parser,
-			parserOptions: {
-				parser: {
-					// Specify a parser for each lang.
-					ts: ts.parser,
-					js: js.parser
-				}
-			}
-		}
-	},
+	{ files: ['**/*.{js,mjs,cjs,ts,tsx}'] },
 	{
 		ignores: [
 			'**/build/**',
