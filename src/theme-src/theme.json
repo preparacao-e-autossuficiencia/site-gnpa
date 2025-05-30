@@ -105,6 +105,29 @@
 					"fontFamily": "\"Russo One\"",
 					"name": "Russo One",
 					"slug": "russo-one"
+				},
+				{
+					"fontFace": [
+						{
+							"fontFamily": "Roboto",
+							"fontStyle": "italic",
+							"fontWeight": "100 900",
+							"src": [
+								"file:./assets/fonts/roboto/roboto-100-900-italic.woff2"
+							]
+						},
+						{
+							"fontFamily": "Roboto",
+							"fontStyle": "normal",
+							"fontWeight": "100 900",
+							"src": [
+								"file:./assets/fonts/roboto/roboto-100-900-normal.woff2"
+							]
+						}
+					],
+					"fontFamily": "Roboto",
+					"name": "Roboto",
+					"slug": "roboto"
 				}
 			],
 			"fontSizes": [
@@ -205,6 +228,14 @@
 				"right": "inherit",
 				"top": "inherit"
 			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--roboto)",
+			"fontSize": "var(--wp--preset--font-size--base)",
+			"fontStyle": "normal",
+			"fontWeight": "400",
+			"letterSpacing": "0%",
+			"lineHeight": "1.4"
 		}
 	},
 	"version": 3,
