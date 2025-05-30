@@ -15,7 +15,7 @@ The public pages will be created with FSE and Gutenberg as mentioned, while memb
 ### Project Setup
 The project setup and development uses multiple technologies, please refer to **Readmes** [Portugues](readmes/readme-pt.md) or [English](readmes/readme-en.md) for a detailed overview.
 
-One a simplified version, we are using:
+On a simplified version, we are using:
 - BUN for installing packages and some tooling
 - NODE because WordPress packages are made in node and their dependencies
 - PHP ( WordPress backend language)
