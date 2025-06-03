@@ -2,36 +2,35 @@ type CreateBlockOptions = {
 	name: string;
 	title: string;
 	description: string;
-	templateType: "static" | "dynamic";
-}
+	templateType: 'static' | 'dynamic';
+};
 
-export async function createBlock({name, title, description, templateType}: CreateBlockOptions) {
+export async function createBlock({ name, title, description, templateType }: CreateBlockOptions) {
 	const currentFilePath = import.meta.path;
-	const currentDir = currentFilePath.slice(0, currentFilePath.lastIndexOf("/"));
+	const currentDir = currentFilePath.slice(0, currentFilePath.lastIndexOf('/'));
 	const templateDir = `${currentDir}/template/${templateType}`;
 	const blocksDir = `${currentDir}/../../src/blocks-src/src`;
-	const namespace = "gnpa";
+	const namespace = 'gnpa';
 
 	const blockPath = `${blocksDir}/${name}`;
 	const blockJsonPath = `${blockPath}/block.json`;
 
 	if (await Bun.file(blockJsonPath).exists()) {
-		console.error("Block already exists");
+		console.error('Block already exists');
 		process.exit(1);
 	}
 
-	const { stdout } = Bun.spawnSync(["ls", templateDir]);
-	const filenames = stdout.toString().trim().split("\n");
+	const { stdout } = Bun.spawnSync(['ls', templateDir]);
+	const filenames = stdout.toString().trim().split('\n');
 
+	const allowedExtensions = ['.tsx', '.scss', '.php'];
 	for (const filename of filenames) {
-		if (!filename.endsWith(".tsx") && !filename.endsWith(".scss") && filename !== "block.json") {
+		if (filename !== 'block.json' && !allowedExtensions.some((ext) => filename.endsWith(ext))) {
 			continue;
 		}
 
 		const srcPath = `${templateDir}/${filename}`;
-		const destFile = filename === 'block.json'
-		? 'block.json'
-		: filename.replace('block', name);
+		const destFile = filename === 'block.json' ? 'block.json' : filename.replace('block', name);
 		const destPath = `${blockPath}/${destFile}`;
 
 		const content = await Bun.file(srcPath).text();
