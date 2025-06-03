@@ -44,9 +44,6 @@
 		"[javascript]": {
 			"editor.defaultFormatter": "esbenp.prettier-vscode"
 		},
-		"[svelte]": {
-			"editor.defaultFormatter": "esbenp.prettier-vscode"
-		},
 		// PHPCS & PHPCBF
 		"php.validate.run": "onSave",
 		"phpSniffer.executablesFolder": "./src/plugin-src/vendor/bin",

@@ -52,7 +52,7 @@ export default [
 		}
 	},
 	{
-		files: ['**/*.{js,mjs,cjs,ts,tsx,jsx}']
+		files: ['cli/**/*.{ts,tsx}', 'src/**/*.{ts,tsx}']
 	},
 	{
 		ignores: [
