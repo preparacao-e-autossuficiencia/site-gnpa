@@ -32,6 +32,10 @@ define( 'GNPA_PLUGIN_FILE', __FILE__ );
 define( 'GNPA_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'GNPA_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
+// TODO: move all of this to a class.
+/**
+ * Register blocks.
+ */
 function gnpa_blocks_init(): void {
 	$blocks_dir = GNPA_PLUGIN_DIR . 'dist/blocks';
 	$manifest_path = $blocks_dir . '/blocks-manifest.php';
@@ -56,3 +60,28 @@ function gnpa_blocks_init(): void {
 	}
 }
 add_action( 'init', 'gnpa_blocks_init' );
+
+add_filter( 'block_categories_all', 'gnpa_register_block_category', 10, 2 );
+
+// TODO: move all of this to a class.
+/**
+ * Register block category.
+ *
+ * @param array                   $categories Array of block categories.
+ * @param WP_Block_Editor_Context $context    The current block editor context.
+ *
+ * @return array|array{icon: null, slug: string, title: string}
+ */
+function gnpa_register_block_category( array $categories, WP_Block_Editor_Context $context ): array {
+	// Our custom category
+	$gnpa_category = array(
+		'slug'  => 'gnpa',
+		'title' => __( 'GNPA Blocks', 'gnpa' ),
+		'icon'  => null,
+	);
+
+	// Prepend it to the list
+	array_unshift( $categories, $gnpa_category );
+
+	return $categories;
+}
