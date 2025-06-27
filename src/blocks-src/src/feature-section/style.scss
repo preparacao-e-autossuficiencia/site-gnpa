@@ -1,12 +1,8 @@
-// .wp-block-gnpa-feature-section {
-// 	padding: 1rem;
-// 	border: 1px dashed #ccc;
-//   }
 .wp-block-gnpa-feature-section {
 	position: relative;
 	display: flex;
 	align-items: stretch;
-	background-color: #111;
+	background-color: var(--wp--preset--color--dark-blue);
 	padding: 0 2rem;
 
 	.container {
@@ -26,6 +22,7 @@
 		color: var(--wp--preset--color--text-color);
 		line-height: 1.2;
 		z-index: 2;
+		padding-right: 30px;
 
 		.lede {
 			font-family: var(--wp--preset--font-family--russo-one);
@@ -70,5 +67,33 @@
 		background-position: center center;
 		background-repeat: no-repeat;
 		z-index: 1;
+	}
+}
+
+
+@media screen and (max-width: 930px) {
+	.wp-block-gnpa-feature-section {
+		flex-direction: column;
+
+		.container {
+			grid-template-columns: 1fr;
+			padding: 2rem 1rem;
+			order: 2;
+		}
+
+		.content {
+			grid-column: auto;
+			padding-right: 0;
+			padding-bottom: 2rem;
+		}
+
+		.image-side {
+			position: relative;
+			width: calc(100% + 4rem);
+			height: 300px;
+			order: 1;
+			margin-left: -2rem;
+			margin-right: -2rem;
+		}
 	}
 }

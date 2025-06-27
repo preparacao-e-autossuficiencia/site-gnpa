@@ -168,7 +168,7 @@
 				},
 				{
 					"name": "2X Large",
-					"size": "60px",
+					"size": "clamp(2.875rem, 6vw + 1rem, 3.75rem)",
 					"slug": "xx-large"
 				}
 			]
