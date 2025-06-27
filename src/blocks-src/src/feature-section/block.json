@@ -24,7 +24,7 @@
 			"type": "string",
 			"default": "Descricao"
 		},
-		"link": {
+		"cta_link": {
 			"type": "object",
 			"default": {
 				"url": "",

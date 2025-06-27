@@ -9,13 +9,12 @@ import {
 import { PanelBody, TextControl, Button, TextareaControl } from '@wordpress/components';
 import { Fragment } from '@wordpress/element';
 import { BlockEditProps } from '@wordpress/blocks';
-import { useState } from '@wordpress/element';
 
 interface FeatureSectionAttributes {
 	lede: string;
 	heading: string;
 	description: string;
-	link: {
+	cta_link: {
 		text: string;
 		url: string;
 	};
@@ -26,10 +25,10 @@ export default function Edit({
 	attributes,
 	setAttributes
 }: BlockEditProps<FeatureSectionAttributes>) {
-	const { lede, heading, description, link, image } = attributes;
+	const { lede, heading, description, cta_link, image } = attributes;
 
-	const updateLink = (field: keyof FeatureSectionAttributes['link'], value: string) => {
-		setAttributes({ link: { ...link, [field]: value } });
+	const updateLink = (field: keyof FeatureSectionAttributes['cta_link'], value: string) => {
+		setAttributes({ cta_link: { ...cta_link, [field]: value } });
 	};
 
 	return (
@@ -52,12 +51,12 @@ export default function Edit({
 					/>
 					<TextControl
 						label="Texto do botão"
-						value={link.text}
+						value={cta_link.text}
 						onChange={(val) => updateLink('text', val)}
 					/>
 					<URLInput
 						label="URL do botão"
-						value={link.url}
+						value={cta_link.url}
 						onChange={(val) => updateLink('url', val)}
 					/>
 					<MediaUploadCheck>
@@ -116,8 +115,8 @@ export default function Edit({
 						<RichText
 							tagName="a"
 							className="button"
-							href={link.url}
-							value={link.text}
+							href={cta_link.url}
+							value={cta_link.text}
 							onChange={(val) => updateLink('text', val)}
 							placeholder="Texto do botão"
 						/>

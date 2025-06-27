@@ -10,11 +10,12 @@ $attributes = $attributes ?? array();
 $lede       = $attributes['lede'] ?? '';
 $heading    = $attributes['heading'] ?? '';
 $description = $attributes['description'] ?? '';
-$button       = $attributes['link'] ?? array(
+$cta_link       = $attributes['link'] ?? array(
 	'url' => '',
 	'text' => '',
 );
 $image      = $attributes['image'] ?? '';
+
 ?>
 
 <section <?php echo get_block_wrapper_attributes( array( 'class' => 'feature-section' ) ); ?>>
@@ -32,9 +33,9 @@ $image      = $attributes['image'] ?? '';
 				<p class="text"><?php echo nl2br( esc_html( $description ) ); ?></p>
 			<?php endif; ?>
 
-			<?php if ( ! empty( $button['text'] ) ) : ?>
-				<a class="button" href="<?php echo esc_url( $link['url'] ?? '#' ); ?>">
-					<?php echo esc_html( $link['text'] ); ?>
+			<?php if ( ! empty( $cta_link['text'] ) ) : ?>
+				<a class="button" href="<?php echo esc_url( $cta_link['url'] ?? '#' ); ?>">
+					<?php echo esc_html( $cta_link['text'] ); ?>
 				</a>
 			<?php endif; ?>
 		</div>
