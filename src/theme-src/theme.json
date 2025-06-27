@@ -45,6 +45,11 @@
 					"slug": "text-color"
 				},
 				{
+					"color": "#F4F1EC",
+					"name": "Button text color",
+					"slug": "button-text-color"
+				},
+				{
 					"color": "#D3D6D4",
 					"name": "Headings color",
 					"slug": "headings-color"

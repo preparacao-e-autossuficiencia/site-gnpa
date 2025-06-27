@@ -10,7 +10,7 @@ $attributes = $attributes ?? array();
 $lede       = $attributes['lede'] ?? '';
 $heading    = $attributes['heading'] ?? '';
 $description = $attributes['description'] ?? '';
-$cta_link       = $attributes['link'] ?? array(
+$cta_link       = $attributes['cta_link'] ?? array(
 	'url' => '',
 	'text' => '',
 );
@@ -18,23 +18,23 @@ $image      = $attributes['image'] ?? '';
 
 ?>
 
-<section <?php echo get_block_wrapper_attributes( array( 'class' => 'feature-section' ) ); ?>>
+<section <?php echo wp_kses_post( get_block_wrapper_attributes( array( 'class' => 'feature-section' ) ) ); ?>>
 	<div class="container">
 		<div class="content">
 			<?php if ( $lede ) : ?>
-				<span class="lede"><?php echo esc_html( $lede ); ?></span>
+				<p class="lede"><?php echo esc_html( $lede ); ?></p>
 			<?php endif; ?>
 
 			<?php if ( $heading ) : ?>
-				<h2 class="heading"><?php echo nl2br( esc_html( $heading ) ); ?></h2>
+				<h1 class="heading"><?php echo esc_html( $heading ); ?></h1>
 			<?php endif; ?>
 
 			<?php if ( $description ) : ?>
-				<p class="text"><?php echo nl2br( esc_html( $description ) ); ?></p>
+				<p class="description"><?php echo nl2br( esc_html( $description ) ); ?></p>
 			<?php endif; ?>
 
 			<?php if ( ! empty( $cta_link['text'] ) ) : ?>
-				<a class="button" href="<?php echo esc_url( $cta_link['url'] ?? '#' ); ?>">
+				<a class="cta-button" href="<?php echo esc_url( $cta_link['url'] ?? '#' ); ?>">
 					<?php echo esc_html( $cta_link['text'] ); ?>
 				</a>
 			<?php endif; ?>

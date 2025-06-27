@@ -43,7 +43,6 @@ export default function Edit({
 					/>
 					<TextareaControl
 						__nextHasNoMarginBottom
-						help="Enter some text"
 						label="Descrição"
 						onChange={(val) => setAttributes({ description: val })}
 						placeholder="Placeholder"
@@ -92,14 +91,14 @@ export default function Edit({
 				<div className="container">
 					<div className="content">
 						<RichText
-							tagName="span"
+							tagName="p"
 							className="lede"
 							value={lede}
 							onChange={(val) => setAttributes({ lede: val })}
 							placeholder="Lede"
 						/>
 						<RichText
-							tagName="h2"
+							tagName="h1"
 							className="heading"
 							value={heading}
 							onChange={(val) => setAttributes({ heading: val })}
@@ -107,14 +106,14 @@ export default function Edit({
 						/>
 						<RichText
 							tagName="p"
-							className="text"
+							className="description"
 							value={description}
 							onChange={(val) => setAttributes({ description: val })}
 							placeholder="Texto descritivo"
 						/>
 						<RichText
 							tagName="a"
-							className="button"
+							className="cta-button"
 							href={cta_link.url}
 							value={cta_link.text}
 							onChange={(val) => updateLink('text', val)}

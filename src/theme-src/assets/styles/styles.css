@@ -9,4 +9,8 @@ p {
 	margin-block: 0;
 }
 
+* {
+	box-sizing: border-box;
+}
+
 /* End reset css */
