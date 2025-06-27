@@ -1,0 +1,45 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "gnpa/feature-section",
+	"version": "0.1.0",
+	"title": "Seccao de Destaque",
+	"category": "gnpa",
+	"icon": "smiley",
+	"description": "Seccao de Destaque",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"lede": {
+			"type": "string",
+			"default": "Lede"
+		},
+		"heading": {
+			"type": "string",
+			"default": "Titulo"
+		},
+		"description": {
+			"type": "string",
+			"default": "Descricao"
+		},
+		"link": {
+			"type": "object",
+			"default": {
+				"url": "",
+				"text": ""
+			}
+		},
+		"image": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "gnpa",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./editor.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+  }
