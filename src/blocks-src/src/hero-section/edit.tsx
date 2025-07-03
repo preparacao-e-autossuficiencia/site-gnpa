@@ -93,7 +93,7 @@ export default function Edit({
 						/>
 						<RichText
 							tagName="h1"
-							className="heading"
+							className="heading-1"
 							value={heading ?? ''}
 							onChange={(val) => setAttributes({ heading: val })}
 							placeholder="Título principal"
@@ -107,7 +107,7 @@ export default function Edit({
 						/>
 						<RichText
 							tagName="a"
-							className="cta-button"
+							className="cta-button cta-button--primary"
 							href={cta_link.url ?? ''}
 							value={cta_link.text ?? ''}
 							onChange={(val) => updateLink('text', val)}
@@ -115,7 +115,12 @@ export default function Edit({
 						/>
 					</div>
 				</div>
-				{image && <div className="image-side" style={{ backgroundImage: `url(${image})` }} />}
+				{image && (
+					<div
+						className="hero-section-image-side--right"
+						style={{ backgroundImage: `url(${image})` }}
+					/>
+				)}
 			</div>
 		</Fragment>
 	);

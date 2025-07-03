@@ -14,3 +14,12 @@ p {
 }
 
 /* End reset css */
+
+.cta-button {
+	font-family: var(--wp--preset--font-family--russo-one);
+	font-size: var(--wp--preset--font-size--extra-small);
+	padding: 16px 22px;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 1px;
+}

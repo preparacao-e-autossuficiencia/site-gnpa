@@ -32,8 +32,8 @@
 			margin-bottom: 1rem;
 		}
 
-		.heading {
-			color: #6fa135;
+		.heading-2 {
+			color: var(--wp--preset--color--accent-green);
 			font-size: var(--wp--preset--font-size--xx-large);
 			margin-bottom: 1.5rem;
 			line-height: 1.3;
@@ -46,18 +46,12 @@
 		}
 
 		.cta-button--secondary {
-			font-family: var(--wp--preset--font-family--russo-one);
-			font-size: var(--wp--preset--font-size--extra-small);
-			background: #e57c00;
+			background: var(--wp--preset--color--accent-dark-green);
 			color: var(--wp--preset--color--button-text-color);
-			padding: 16px 22px;
-			text-transform: uppercase;
-			text-decoration: none;
-			letter-spacing: 1px;
 		}
 	}
 
-	.image-side {
+	.feature-section-image-side--left {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -87,7 +81,7 @@
 			padding-bottom: 2rem;
 		}
 
-		.image-side {
+		.feature-section-image-side--left {
 			position: relative;
 			width: calc(100% + 4rem);
 			height: 300px;

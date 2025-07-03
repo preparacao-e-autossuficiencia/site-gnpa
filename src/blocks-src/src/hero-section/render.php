@@ -26,7 +26,7 @@ $image      = $attributes['image'] ?? '';
 			<?php endif; ?>
 
 			<?php if ( $heading ) : ?>
-				<h1 class="heading"><?php echo esc_html( $heading ); ?></h1>
+				<h1 class="heading-1"><?php echo esc_html( $heading ); ?></h1>
 			<?php endif; ?>
 
 			<?php if ( $description ) : ?>
@@ -34,7 +34,7 @@ $image      = $attributes['image'] ?? '';
 			<?php endif; ?>
 
 			<?php if ( ! empty( $cta_link['text'] ) ) : ?>
-				<a class="cta-button" href="<?php echo esc_url( $cta_link['url'] ?? '#' ); ?>">
+				<a class="cta-button cta-button--primary" href="<?php echo esc_url( $cta_link['url'] ?? '#' ); ?>">
 					<?php echo esc_html( $cta_link['text'] ); ?>
 				</a>
 			<?php endif; ?>
@@ -42,6 +42,6 @@ $image      = $attributes['image'] ?? '';
 	</div>
 
 	<?php if ( $image ) : ?>
-		<div class="image-side" style="background-image: url('<?php echo esc_url( $image ); ?>');"></div>
+		<div class="hero-section-image-side--right" style="background-image: url('<?php echo esc_url( $image ); ?>');"></div>
 	<?php endif; ?>
 </section>
