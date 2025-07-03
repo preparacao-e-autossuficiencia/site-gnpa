@@ -9,17 +9,7 @@ import {
 import { PanelBody, TextControl, Button, TextareaControl } from '@wordpress/components';
 import { Fragment } from '@wordpress/element';
 import { BlockEditProps } from '@wordpress/blocks';
-
-interface FeatureSectionAttributes {
-	lede: string;
-	heading: string;
-	description: string;
-	cta_link: {
-		text: string;
-		url: string;
-	};
-	image: string;
-}
+import { FeatureSectionAttributes } from '../../types/blockInterfaces';
 
 export default function Edit({
 	attributes,
@@ -35,10 +25,14 @@ export default function Edit({
 		<Fragment>
 			<InspectorControls>
 				<PanelBody title="Configurações da Seção">
-					<TextControl label="Lede" value={lede} onChange={(val) => setAttributes({ lede: val })} />
+					<TextControl
+						label="Lede"
+						value={lede ?? ''}
+						onChange={(val) => setAttributes({ lede: val })}
+					/>
 					<TextControl
 						label="Título principal"
-						value={heading}
+						value={heading ?? ''}
 						onChange={(val) => setAttributes({ heading: val })}
 					/>
 					<TextareaControl
@@ -46,16 +40,16 @@ export default function Edit({
 						label="Descrição"
 						onChange={(val) => setAttributes({ description: val })}
 						placeholder="Placeholder"
-						value={description}
+						value={description ?? ''}
 					/>
 					<TextControl
 						label="Texto do botão"
-						value={cta_link.text}
+						value={cta_link.text ?? ''}
 						onChange={(val) => updateLink('text', val)}
 					/>
 					<URLInput
 						label="URL do botão"
-						value={cta_link.url}
+						value={cta_link.url ?? ''}
 						onChange={(val) => updateLink('url', val)}
 					/>
 					<MediaUploadCheck>
@@ -64,7 +58,7 @@ export default function Edit({
 							allowedTypes={['image']}
 							render={({ open }) => (
 								<div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-									<Button onClick={open} isSecondary>
+									<Button onClick={open} variant="secondary">
 										{image ? 'Alterar imagem de fundo' : 'Escolher imagem de fundo'}
 									</Button>
 									{image && (
@@ -93,29 +87,29 @@ export default function Edit({
 						<RichText
 							tagName="p"
 							className="lede"
-							value={lede}
+							value={lede ?? ''}
 							onChange={(val) => setAttributes({ lede: val })}
 							placeholder="Lede"
 						/>
 						<RichText
 							tagName="h1"
 							className="heading"
-							value={heading}
+							value={heading ?? ''}
 							onChange={(val) => setAttributes({ heading: val })}
 							placeholder="Título principal"
 						/>
 						<RichText
 							tagName="p"
 							className="description"
-							value={description}
+							value={description ?? ''}
 							onChange={(val) => setAttributes({ description: val })}
 							placeholder="Texto descritivo"
 						/>
 						<RichText
 							tagName="a"
 							className="cta-button"
-							href={cta_link.url}
-							value={cta_link.text}
+							href={cta_link.url ?? ''}
+							value={cta_link.text ?? ''}
 							onChange={(val) => updateLink('text', val)}
 							placeholder="Texto do botão"
 						/>
