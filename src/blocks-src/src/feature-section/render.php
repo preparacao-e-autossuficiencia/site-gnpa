@@ -25,7 +25,8 @@ $image         = $attributes['image'] ?? '';
 			<?php endif; ?>
 
 			<?php if ( $content ) : ?>
-				<div class="inner-demo">//todo: fazer o fix a esta div
+				<div class="inner-demo">
+					<!-- todo: fazer o fix a esta div -->
 					<?php echo wp_kses_post( $content ); ?>
 				</div>
 			<?php endif; ?>
