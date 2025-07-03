@@ -11,7 +11,27 @@
 	"supports": {
 		"html": false
 	},
-	"attributes": {},
+	"attributes": {
+		"heading": {
+			"type": "string",
+			"default": "Juntos, construímos um futuro melhor"
+		},
+		"description": {
+			"type": "string",
+			"default": "Aprenda a enfrentar os desafios do futuro"
+		},
+		"cta_link": {
+			"type": "object",
+			"default": {
+				"url": "",
+				"text": ""
+			}
+		},
+		"image": {
+			"type": "string",
+			"default": ""
+		}
+	},
 	"textdomain": "gnpa",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./editor.css",
