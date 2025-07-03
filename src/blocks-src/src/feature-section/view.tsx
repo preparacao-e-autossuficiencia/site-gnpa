@@ -1,1 +1,1 @@
-console.log('Hello World! (from feature-section block)');
+console.log('Hello World! (from feature-section-image-offset block)');
