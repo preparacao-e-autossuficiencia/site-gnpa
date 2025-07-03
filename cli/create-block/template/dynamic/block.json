@@ -4,7 +4,7 @@
 	"name": "__NAMESPACE__/__BLOCK__",
 	"version": "0.1.0",
 	"title": "__BLOCK_TITLE__",
-	"category": "widgets",
+	"category": "gnpa",
 	"icon": "smiley",
 	"description": "__BLOCK_DESCRIPTION__",
 	"example": {},
