@@ -1,3 +1,14 @@
-.wp-block-gnpa-feature-section-image-offset {
-	outline: 2px dashed #aaa;
-  }
+
+.sidebar-richtext-wrapper {
+	margin-bottom: 1rem;
+}
+
+.sidebar-richtext {
+	border: 1px solid #ccc;
+	padding: 8px;
+	min-height: 120px;
+	background: #fff;
+	border-radius: 4px;
+	overflow: auto;
+	resize: vertical;
+}

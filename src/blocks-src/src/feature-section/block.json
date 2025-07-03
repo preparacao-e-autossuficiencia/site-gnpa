@@ -9,16 +9,15 @@
 	"description": "Secção de Destaque com Imagem Deslocada",
 	"example": {},
 	"supports": {
-		"html": false
+		"html": false,
+		"innerBlocks": {
+			"allowedBlocks": ["core/paragraph", "core/list"]
+		}
 	},
 	"attributes": {
 		"heading": {
 			"type": "string",
 			"default": "Juntos, construímos um futuro melhor"
-		},
-		"description": {
-			"type": "string",
-			"default": "Aprenda a enfrentar os desafios do futuro"
 		},
 		"cta_link": {
 			"type": "object",
@@ -34,7 +33,7 @@
 	},
 	"textdomain": "gnpa",
 	"editorScript": "file:./index.js",
-	"editorStyle": "file:./editor.css",
+	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css",
 	"render": "file:./render.php",
 	"viewScript": "file:./view.js"

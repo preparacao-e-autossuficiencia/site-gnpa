@@ -4,18 +4,20 @@ import {
 	InspectorControls,
 	URLInput,
 	MediaUpload,
-	MediaUploadCheck
+	MediaUploadCheck,
+	InnerBlocks
 } from '@wordpress/block-editor';
-import { PanelBody, TextControl, Button, TextareaControl } from '@wordpress/components';
+import { PanelBody, TextControl, Button } from '@wordpress/components';
 import { Fragment } from '@wordpress/element';
 import { BlockEditProps } from '@wordpress/blocks';
 import { FeatureSectionAttributes } from '../../types/blockInterfaces';
+import './editor.scss';
 
 export default function Edit({
 	attributes,
 	setAttributes
 }: BlockEditProps<FeatureSectionAttributes>) {
-	const { heading, description, cta_link, image } = attributes;
+	const { heading, cta_link, image } = attributes;
 
 	const updateLink = (field: keyof FeatureSectionAttributes['cta_link'], value: string) => {
 		setAttributes({ cta_link: { ...cta_link, [field]: value } });
@@ -29,13 +31,6 @@ export default function Edit({
 						label="Título principal"
 						value={heading ?? ''}
 						onChange={(val) => setAttributes({ heading: val })}
-					/>
-					<TextareaControl
-						__nextHasNoMarginBottom
-						label="Descrição"
-						onChange={(val) => setAttributes({ description: val })}
-						placeholder="Placeholder"
-						value={description ?? ''}
 					/>
 					<TextControl
 						label="Texto do botão"
@@ -86,13 +81,18 @@ export default function Edit({
 							onChange={(val) => setAttributes({ heading: val })}
 							placeholder="Título principal"
 						/>
-						<RichText
-							tagName="p"
-							className="description"
-							value={description ?? ''}
-							onChange={(val) => setAttributes({ description: val })}
-							placeholder="Texto descritivo"
-						/>
+						<div className="description">
+							<InnerBlocks
+								allowedBlocks={['core/paragraph', 'core/list']}
+								template={[
+									[
+										'core/paragraph',
+										{ placeholder: 'Escrever ou / para selecionar o block de lista' }
+									]
+								]}
+								templateLock={false}
+							/>
+						</div>
 						<RichText
 							tagName="a"
 							className="cta-button cta-button--secondary"

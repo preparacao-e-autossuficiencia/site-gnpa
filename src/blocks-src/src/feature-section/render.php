@@ -9,14 +9,14 @@
 $attributes = $attributes ?? array();
 
 $heading       = $attributes['heading'] ?? '';
-$description   = $attributes['description'] ?? '';
+$content       = $content ?? '';
 $cta_link      = $attributes['cta_link'] ?? array(
 	'url' => '',
 	'text' => '',
 );
 $image         = $attributes['image'] ?? '';
-
 ?>
+
 <section <?php echo wp_kses_post( get_block_wrapper_attributes() ); ?>>
 	<div class="container">
 		<div class="content">
@@ -24,15 +24,17 @@ $image         = $attributes['image'] ?? '';
 				<h2 class="heading-2"><?php echo esc_html( $heading ); ?></h2>
 			<?php endif; ?>
 
-			<?php if ( $description ) : ?>
-				<p class="description"><?php echo nl2br( esc_html( $description ) ); ?></p>
+			<?php if ( $content ) : ?>
+				<div class="inner-demo">//todo: fazer o fix a esta div
+					<?php echo wp_kses_post( $content ); ?>
+				</div>
 			<?php endif; ?>
 
 			<?php if ( ! empty( $cta_link['text'] ) ) : ?>
 				<a class="cta-button cta-button--secondary" href="<?php echo esc_url( $cta_link['url'] ?? '#' ); ?>">
 					<?php echo esc_html( $cta_link['text'] ); ?>
 				</a>
-			<?php endif; ?>
+				<?php endif; ?>
 		</div>
 	</div>
 
