@@ -28,7 +28,8 @@
         "szepeviktor/phpstan-wordpress": "^2.0",
         "php-stubs/wordpress-stubs": "^6.8",
         "php-stubs/wordpress-tests-stubs": "^6.8",
-        "pestphp/pest": "^3.8"
+        "pestphp/pest": "^3.8",
+        "php-stubs/acf-pro-stubs": "^6.4"
 	},
     "minimum-stability": "stable",
     "config": {
