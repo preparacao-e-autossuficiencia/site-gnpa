@@ -8,3 +8,10 @@ export interface FeatureSectionAttributes {
 	};
 	image?: string;
 }
+
+export interface EventListFrontpageAttributes {
+	heading?: string;
+	description?: string;
+	second_description?: string;
+	events_count?: number;
+}

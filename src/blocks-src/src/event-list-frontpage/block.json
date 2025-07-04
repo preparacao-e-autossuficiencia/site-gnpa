@@ -11,7 +11,24 @@
 	"supports": {
 		"html": false
 	},
-	"attributes": {},
+	"attributes": {
+		"heading": {
+			"type": "string",
+			"default": "Eventos"
+		},
+		"description": {
+			"type": "string",
+			"default": "Porque Sobreviver nao basta"
+		},
+		"second_description": {
+			"type": "string",
+			"default": "No Preparacao e Autossuficiencia, capacitamos pessoas a adotar um estilo de vida resiliente e independente."
+		},
+		"events_count": {
+			"type": "number",
+			"default": 2
+		}
+	},
 	"textdomain": "gnpa",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./editor.css",
