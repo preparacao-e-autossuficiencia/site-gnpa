@@ -2,7 +2,7 @@ type RenderedText = {
 	rendered: string;
 };
 
-export interface EventoPostType {
+type PostTypes = {
 	id: number;
 	slug: string;
 	title: RenderedText;
@@ -11,4 +11,6 @@ export interface EventoPostType {
 	date: string;
 	link: string;
 	acf?: Record<string, unknown>;
-}
+};
+
+export interface EventoPostTypes extends PostTypes {}
