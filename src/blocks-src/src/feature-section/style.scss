@@ -7,9 +7,6 @@
 
 	.container {
 		position: relative;
-		max-width: 1330px;
-		padding: 4rem 0;
-		margin-inline: auto;
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 	}

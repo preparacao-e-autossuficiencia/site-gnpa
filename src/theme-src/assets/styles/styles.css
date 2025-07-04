@@ -15,6 +15,22 @@ p {
 
 /* End reset css */
 
+
+/* global html elements */
+
+section {
+	padding: 0 2rem;
+}
+
+
+/* classes */
+
+.container {
+	max-width: 1330px;
+	padding: 4rem 0;
+	margin-inline: auto;
+}
+
 .cta-button {
 	font-family: var(--wp--preset--font-family--russo-one);
 	font-size: var(--wp--preset--font-size--extra-small);
@@ -22,4 +38,11 @@ p {
 	text-transform: uppercase;
 	text-decoration: none;
 	letter-spacing: 1px;
+}
+
+
+@media screen and (max-width: 930px) {
+	.container {
+		padding: 1rem 0rem;
+	}
 }
