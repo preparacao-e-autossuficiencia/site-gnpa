@@ -45,6 +45,21 @@
 			line-height: 1.4;
 		}
 
+		.description ul {
+			margin: 0;
+			padding: 0;
+		}
+
+		.description ul li {
+			list-style: none;
+			margin-block-end: 5px;
+		}
+
+		.description ul li::before {
+			content: '—';
+			margin-right: 0.5rem;
+		}
+
 		.cta-button--secondary {
 			background: var(--wp--preset--color--accent-dark-green);
 			color: var(--wp--preset--color--button-text-color);

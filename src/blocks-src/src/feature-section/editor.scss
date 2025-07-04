@@ -1,14 +1,24 @@
+.wp-block-gnpa-feature-section-image-offset {
 
-.sidebar-richtext-wrapper {
-	margin-bottom: 1rem;
-}
+	.content {
 
-.sidebar-richtext {
-	border: 1px solid #ccc;
-	padding: 8px;
-	min-height: 120px;
-	background: #fff;
-	border-radius: 4px;
-	overflow: auto;
-	resize: vertical;
+		.description {
+
+			ul {
+				margin: 0;
+				padding: 0;
+			}
+
+			ul li {
+				display: flex;
+				list-style: none;
+				margin-block-end: 5px;
+
+				&::before {
+					content: '—';
+					margin-right: 0.5rem;
+				}
+			}
+		}
+	}
 }

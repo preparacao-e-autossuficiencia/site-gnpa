@@ -71,7 +71,7 @@ export default function Edit({
 				</PanelBody>
 			</InspectorControls>
 
-			<div {...useBlockProps({ className: 'hero-section editor-preview' })}>
+			<div {...useBlockProps({ className: 'editor-preview' })}>
 				<div className="container">
 					<div className="content">
 						<RichText
