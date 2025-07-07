@@ -26,6 +26,7 @@
 			"christian-kohler.path-intellisense",
 			"EditorConfig.EditorConfig",
 			"streetsidesoftware.code-spell-checker",
+			"streetsidesoftware.code-spell-checker-portuguese",
 			"yoavbls.pretty-ts-errors"
 		],
 		"unwantedRecommendations": []
@@ -92,10 +93,6 @@
 			"pcntl",
 			"pcre",
 			"PDO",
-			"pdo_ibm",
-			"pdo_mysql",
-			"pdo_pgsql",
-			"pdo_sqlite",
 			"pgsql",
 			"Phar",
 			"posix",

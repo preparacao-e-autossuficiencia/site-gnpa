@@ -45,7 +45,8 @@
 		"phpma:stop": "docker stop wp-env-phpmyadmin",
 		"create-block": "bun cli/create-block/index.ts",
 		"blocks:dev": "bun run --filter=gnpa-blocks start",
-		"blocks:build": "bun run --filter=gnpa-blocks build"
+		"blocks:build": "bun run --filter=gnpa-blocks build",
+		"composer": "composer --working-dir=src/plugin-src"
 	},
 	"type": "module",
 	"workspaces": [
