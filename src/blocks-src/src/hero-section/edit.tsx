@@ -107,7 +107,7 @@ export default function Edit({
 						/>
 						<RichText
 							tagName="a"
-							className="cta-button cta-button--primary"
+							className="button button--primary"
 							href={cta_link.url ?? ''}
 							value={cta_link.text ?? ''}
 							onChange={(val) => updateLink('text', val)}

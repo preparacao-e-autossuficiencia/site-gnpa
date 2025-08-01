@@ -15,7 +15,6 @@ p {
 
 /* End reset css */
 
-
 /* global html elements */
 
 section {
@@ -27,7 +26,6 @@ img {
 	height: auto;
 }
 
-
 /* classes */
 
 .container {
@@ -36,13 +34,23 @@ img {
 	margin-inline: auto;
 }
 
-.cta-button {
+.button {
 	font-family: var(--wp--preset--font-family--russo-one);
 	font-size: var(--wp--preset--font-size--extra-small);
 	padding: 16px 22px;
 	text-transform: uppercase;
 	text-decoration: none;
 	letter-spacing: 1px;
+}
+
+.button--primary {
+	background: var(--wp--preset--color--accent-orange);
+	color: var(--wp--preset--color--button-text-color);
+}
+
+.button--secondary {
+	background: var(--wp--preset--color--accent-dark-green);
+	color: var(--wp--preset--color--button-text-color);
 }
 
 .grid {

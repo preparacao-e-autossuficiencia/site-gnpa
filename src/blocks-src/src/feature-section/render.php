@@ -31,7 +31,7 @@ $image         = $attributes['image'] ?? '';
 			<?php endif; ?>
 
 			<?php if ( ! empty( $cta_link['text'] ) ) : ?>
-				<a class="cta-button cta-button--secondary" href="<?php echo esc_url( $cta_link['url'] ?? '#' ); ?>">
+				<a class="button button--secondary" href="<?php echo esc_url( $cta_link['url'] ?? '#' ); ?>">
 					<?php echo esc_html( $cta_link['text'] ); ?>
 				</a>
 				<?php endif; ?>
